@@ -1,26 +1,18 @@
 #!/usr/bin/env python3.4
 
-import sys, os
+import os
 import time
+import datetime
 import picamera
-
-# Initialise camera
-cam = picamera.PiCamera()
-
-# Enable send commands to be run on command line
-def run(cmd):
-    print("Run: " + cmd)
-    subprocess.call([cmd], shell = True)
 
 # Create a camera object and capture image using generated filename
 def camCapture(filename):
     with picamera.PiCamera as camera:
-        # camera.resolution = size
         camera.resolution = (640, 480)
-        print("Image: %s.jpg"%filename)
+        print("Photo: %s.jpg"%filename)
         time.sleep(2)
-        camera.capture(filename, format='jpeg')
-        print("Image Captured and saved ...")
+        camera.capture(filename + '.jpg', format='jpeg')
+        print("Photo captured and saved ...")
 
 # Generate timestamp string generating name for photos
 def timestamp():
@@ -53,9 +45,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-
-
-
-
