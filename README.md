@@ -3,7 +3,8 @@ Capture photos using Raspberry Pi Camera and upload to dropbox. Delete local fil
 
 ### Run
 _Note: These instructions are based on running on the Raspberry Pi 3 with Raspbian Jessie Lite OS_
-*Capture with Pi camera*
+
+**Capture with Pi camera**
 1. Insert Pi camera
 2. Enable camera in raspi-config
 3. Make sure you have the following installed:
@@ -11,7 +12,7 @@ _Note: These instructions are based on running on the Raspberry Pi 3 with Raspbi
     * picamera (sudo apt-get install python3-picamera)
 4. Specify photo format
 
-*Dropbox Upload*
+**Dropbox Upload**
 1. Sign up for Dropbox account at dropbox.com
 2. Navigate to [Dropbox Developers](https://www.dropbox.com/developers)
 3. Select 'Create your app'
@@ -29,8 +30,9 @@ _Note: These instructions are based on running on the Raspberry Pi 3 with Raspbi
    * TOKEN - the dropbox app code you generated
    * uploadPath - folder on dropbox you want photo uploaded to (Not required)
 
-*Run*
-python3 picamCaptureDropboxUpload.py
+**Run**
+
+$ python3 picamCaptureDropboxUpload.py
 
 
 ### Relevant Documentation
